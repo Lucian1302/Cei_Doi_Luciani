@@ -1,0 +1,5 @@
+<launch>
+<node name="Nod1" type="avoid.py" pkg="topics_quiz" output="screen">
+</node>
+</launch>
+

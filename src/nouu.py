@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+
+import rospy
+from Cei_Doi_Luciani.msg import Mesaj
+
+rospy.init_node("Nod")
+
+pub=rospy.Publisher('/topic1',Mesaj,queue_size=1)
+
+mesaj=Mesaj()
+mesaj.nume="Robotel"
+mesaj.model="Model nou"
+mesaj.greutate=80
+
+rate=rospy.Rate(2)
+
+while not rospy.is_shutdown():
+	print (mesaj.nume)
+	print (mesaj.model)
+	print (mesaj.greutate)
+	pub.publish(mesaj)
+	rate.sleep()
+
