@@ -13,7 +13,8 @@ def my_callback(request):
    	 move_circle.angular.z = move_circle.linear.x/servv
     	 my_pub.publish(move_circle)
     	 rospy.loginfo("One circle is done")
-    return servResponse()
+   move.success=True	  
+   return servResponse()
 
 rospy.init_node('move_in_circle') 
 my_service = rospy.Service('/move_in_circle', serv , my_callback)
