@@ -1,0 +1,5 @@
+<launch>
+<node pkg="services_quiz"  type="server_circle.py" name="Circle" output="screen" >
+</node>
+</launch>
+
